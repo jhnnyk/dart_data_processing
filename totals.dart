@@ -28,7 +28,7 @@ void main(List<String> arguments) {
 
   for (var entry in totalDurationByTag.entries) {
     final durationFormatted = entry.value.toStringAsFixed(1);
-    final tag = entry.key;
+    final tag = entry.key == '' ? 'Unallocated' : entry.key;
 
     print('$tag: ${durationFormatted}h');
   }
